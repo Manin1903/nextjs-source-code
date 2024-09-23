@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    tools {
-        maven 'maven'
-    }
+
     environment {
         IMAGE = "jingnin/next-img"
         DOCKER_IMAGE = "${IMAGE}:${BUILD_NUMBER}"
@@ -28,12 +26,6 @@ pipeline {
           }
         }
 
-        stage("clean package") {
-            steps {
-              echo "🚀 Building the application..."
-              sh ' mvn clean install '
-            }
-        }
 
         stage("build and push docker image") {
 
