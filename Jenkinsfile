@@ -10,7 +10,7 @@ pipeline {
         GIT_BRANCH = "main"
         MANIFEST_REPO = "manifest-repo"
         MANIFEST_FILE_PATH = "manifest/deployment.yaml"
-        GIT_CREDENTIALS_ID = 'PAT_jenkins'
+        GIT_CREDENTIALS_ID = 'github-token'
     }
 
     stages {
@@ -80,7 +80,7 @@ pipeline {
             steps {
                 script {
                     dir("${MANIFEST_REPO}") {
-                        withCredentials([usernamePassword(credentialsId: PAT_jenkins, passwordVariable: 'GIT_PASS', usernameVariable: 'GIT_USER')]) {
+                        withCredentials([usernamePassword(credentialsId: github-token, passwordVariable: 'GIT_PASS', usernameVariable: 'GIT_USER')]) {
                             sh """
                             git config --global user.name "manin"
                             git config --global user.email "sokmanin.1918@gmail.com"
