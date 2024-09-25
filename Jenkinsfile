@@ -70,7 +70,7 @@ pipeline {
                 script {
                     echo "🚀 Update the image in the deployment manifest..."
                     sh """
-                    sed -i 's|image: ${IMAGE}:.*|image: ${DOCKER_IMAGE}|' ${MANIFEST_REPO}/${MANIFEST_FILE_PATH}
+                    sed -i 's|image: jingnin/next-img.*|image: ${DOCKER_IMAGE}|' ${MANIFEST_REPO}/${MANIFEST_FILE_PATH}
                     cat ${MANIFEST_REPO}/${MANIFEST_FILE_PATH}
                     echo 'updated tag'
                     """
