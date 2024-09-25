@@ -102,6 +102,12 @@ pipeline {
                 }
             }
         }
+
+        stage("running") {
+            steps {
+                echo "running ......"
+            }
+        }
         
 
     }
