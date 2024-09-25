@@ -9,7 +9,7 @@ pipeline {
         GIT_MANIFEST_REPO = "https://github.com/Manin1903/manifest-nextjs.git"
         GIT_BRANCH = "main"
         MANIFEST_REPO = "manifest-repo"
-        MANIFEST_FILE_PATH = "manifest/deployment.yaml
+        // MANIFEST_FILE_PATH = "manifest/deployment.yaml
         GIT_CREDENTIALS_ID = 'PAT_jenkins'
     }
 
