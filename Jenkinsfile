@@ -84,7 +84,7 @@ pipeline {
                         withCredentials([usernamePassword(credentialsId: 'github-token', passwordVariable: 'GIT_PASS', usernameVariable: 'GIT_USER')]) {
                             sh """
                             echo 'user: $GIT_USER'
-                            eccho 'pass: $GIT_PASS'
+                            echo 'pass: $GIT_PASS'
                             git config --global user.name "manin"
                             git config --global user.email "sokmanin.1918@gmail.com"
                             echo "🚀 Checking..."
